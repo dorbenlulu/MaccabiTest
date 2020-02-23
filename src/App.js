@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {observer} from 'mobx-react-lite'
+import Form from './Components/Form'
+// import Clients from './Components/Table/Clients'
+import Clients from './Components/Table/Clients2'
+import Header from './Components/Header'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
+const App = observer(() => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <Header />
+      <Route exact path="/" render={() => <Form />} />
+      <Route exact path="/clients" render={() => <Clients />} />
+    </Router>
     </div>
   );
-}
+})
 
 export default App;

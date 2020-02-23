@@ -1,0 +1,19 @@
+const data  = [
+    {
+      "fullName": "Perkins Cunningham",
+      "age": 20,
+      "email": "perkinscunningham@imant.com"
+    },
+    {
+      "fullName": "Fischer Hammond",
+      "age": 31,
+      "email": "fischerhammond@imant.com"
+    },
+    {
+      "fullName": "Gonzalez Armstrong",
+      "age": 29,
+      "email": "gonzalezarmstrong@imant.com"
+    }
+  ]
+
+  module.exports = data
